@@ -8,7 +8,8 @@
             http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-4.2.xsd">
-
+<!--load property file -->
+	<context:property-placeholder location="classpath:Sport.properties"/>
 
 	<bean id="myFortune"
 			class="com.company.HappyFortuneService">
@@ -31,8 +32,9 @@
 		  class="com.company.CricketCoach" >
 		<!--setter injection-->
 		<property name="fortuneService" ref="myFortune"/>
-		<property name="emailAddress" value="mehdi.mhmvd@gmail.com"/>
-		<property name="team" value="sunrise team"/>
+
+		<property name="emailAddress" value="${foo.email}"/>
+		<property name="team" value="${foo.team}"/>
 
 	</bean>
 
