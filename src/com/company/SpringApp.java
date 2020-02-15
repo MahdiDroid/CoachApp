@@ -14,6 +14,7 @@ public class SpringApp {
         // call method
 
         System.out.println(thecoach.getDailyWorkout());
+        System.out.println(thecoach.getDailyFortune());
         // close the context
 
         context.close();

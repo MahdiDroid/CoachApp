@@ -8,10 +8,22 @@
             http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+
+	<bean id="myFortune"
+			class="com.company.HappyFortuneService">
+	</bean>
+
 	<bean id="myCoach"
 		  class="com.company.BaseballCoach">
+		<!--		constructor injection-->
+		<constructor-arg ref ="myFortune" />
 
 	</bean>
+
+
+
+
 
 
 
