@@ -15,9 +15,22 @@
 	</bean>
 
 	<bean id="myCoach"
-		  class="com.company.BaseballCoach">
+				 class="com.company.BaseballCoach">
+	<!--		constructor injection-->
+	<constructor-arg ref ="myFortune" />
+
+</bean>
+	<bean id="trackCoach"
+		  class="com.company.TrackCoach">
 		<!--		constructor injection-->
 		<constructor-arg ref ="myFortune" />
+
+	</bean>
+
+	<bean id="myCricketCoach"
+		  class="com.company.CricketCoach" >
+		<!--setter injection-->
+		<property name="fortuneService" ref="myFortune"/>
 
 	</bean>
 
