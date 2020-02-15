@@ -15,8 +15,9 @@
 	</bean>
 
 	<bean id="myCoach"
-				class="com.company.BaseballCoach"
-				scope="prototype">
+				class="com.company.TrackCoach"
+				init-method="doMyStartUpStuff"
+				destroy-method="doMyDestroyStuff">
 
 	<!--		constructor injection-->
 	<constructor-arg ref ="myFortune" />
