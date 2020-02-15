@@ -31,6 +31,8 @@
 		  class="com.company.CricketCoach" >
 		<!--setter injection-->
 		<property name="fortuneService" ref="myFortune"/>
+		<property name="emailAddress" value="mehdi.mhmvd@gmail.com"/>
+		<property name="team" value="sunrise team"/>
 
 	</bean>
 

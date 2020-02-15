@@ -1,7 +1,29 @@
 package com.company;
 
 public class CricketCoach implements ICoach {
+
     private HappyFortuneService fortuneService;
+    private  String emailAddress;
+    private String team;
+
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        System.out.println("CricketCose: inside setter method email*************");
+        this.emailAddress = emailAddress;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        System.out.println("CricketCose: inside setter method Team***********");
+        this.team = team;
+    }
 
     public CricketCoach() {
         System.out.println("inside  of no-arg constructor");
@@ -14,9 +36,9 @@ public class CricketCoach implements ICoach {
         this.fortuneService = fortuneService;
     }
 
-    public CricketCoach(HappyFortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-    }
+//    public CricketCoach(HappyFortuneService fortuneService) {
+//        this.fortuneService = fortuneService;
+//    }
 
 
     @Override
